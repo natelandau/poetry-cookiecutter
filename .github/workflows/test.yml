@@ -29,12 +29,12 @@ jobs:
       - name: Scaffold Python package
         run: |
           pip install --no-input cruft
-          cruft create --no-input --extra-context '{"package_name": "My Package", "python_version": "3.8", "with_fastapi_api": "1", "with_typer_cli": "1"}' .
+          cruft create --no-input --extra-context '{"package_name": "My Package", "python_version": "3.8"}' .
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: 16
 
       - name: Install @devcontainers/cli
         run: npm install --location=global @devcontainers/cli
